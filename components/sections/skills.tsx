@@ -7,20 +7,45 @@ import { Reveal } from "@/components/ui/reveal";
 export const Skills = () => {
   const skillCategories = [
     {
-      title: "Deep Learning & NLP",
-      skills: ["PyTorch", "Transformers (Hugging Face)", "RLHF / DPO", "Tokenization Strategies", "Model Fine-tuning (QLoRA)"],
+      title: "AI/ML & NLP",
+      skills: [
+        "Hugging Face Transformers",
+        "PyTorch",
+        "XLM-RoBERTa",
+        "Model Fine-Tuning",
+        "Text Classification",
+        "Structured Outputs (Pydantic)",
+        "LLM API Integration",
+        "AI Model Evaluation"
+      ],
     },
     {
-      title: "Frameworks & Engines",
-      skills: ["FastAPI", "LangChain", "LlamaIndex", "vLLM", "DeepSpeed", "Triton Inference Server"],
+      title: "Core Languages",
+      skills: ["Python", "TypeScript", "JavaScript", "Java", "C"],
     },
     {
-      title: "Infrastructure & Data",
-      skills: ["PostgreSQL (pgvector)", "Qdrant / Pinecone", "Docker", "AWS / GCP", "Redis", "gRPC / WebSockets"],
+      title: "Backend & DevOps",
+      skills: [
+        "FastAPI",
+        "Flask",
+        "REST API Design",
+        "Async Programming (Anyio)",
+        "Docker Containerization",
+        "Git & GitHub Versioning",
+        "Render / Netlify"
+      ],
     },
     {
-      title: "Full-Stack Web Core",
-      skills: ["Next.js (App Router)", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Node.js"],
+      title: "Frontend & Databases",
+      skills: [
+        "React",
+        "Tailwind CSS",
+        "ShadCN UI",
+        "Framer Motion",
+        "PostgreSQL",
+        "Supabase Row-Level Security",
+        "MongoDB"
+      ],
     },
   ];
 

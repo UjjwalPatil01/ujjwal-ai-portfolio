@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Send, Terminal } from "lucide-react";
+import { Mail, Send, Terminal, FileText } from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Reveal } from "@/components/ui/reveal";
 
@@ -57,8 +57,8 @@ export const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      val: "contact@ujjwal.ai",
-      href: "mailto:contact@ujjwal.ai",
+      val: "ujjwalpatil163@gmail.com",
+      href: "mailto:ujjwalpatil163@gmail.com",
     },
     {
       icon: <GithubIcon className="w-5 h-5" />,
@@ -69,8 +69,14 @@ export const Contact = () => {
     {
       icon: <LinkedinIcon className="w-5 h-5" />,
       label: "LinkedIn",
-      val: "linkedin.com/in/ujjwal",
-      href: "https://linkedin.com",
+      val: "linkedin.com/in/ujjwalpatil001",
+      href: "https://www.linkedin.com/in/ujjwalpatil001",
+    },
+    {
+      icon: <FileText className="w-5 h-5" />,
+      label: "Curriculum Vitae",
+      val: "Download PDF Resume",
+      href: "https://drive.google.com/file/d/1V25lZgWuzQ9XgS2WdeKIrZgnNjod9rPR/view?usp=drive_link",
     },
   ];
 
@@ -94,7 +100,7 @@ export const Contact = () => {
           </Reveal>
           <Reveal delay={0.3}>
             <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base">
-              Ready to explore computational problems, deployment architectures, or integration pipelines? Reach out directly via email or through developer portals.
+              Ready to discuss machine learning applications, backend integrations, or NLP opportunities? Reach out directly via email, check my developer profiles, or download my resume.
             </p>
           </Reveal>
 

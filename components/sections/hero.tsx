@@ -21,15 +21,15 @@ export const Hero = () => {
       {/* Main Headline */}
       <Reveal delay={0.3} yOffset={40}>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-extrabold tracking-tight mb-6 max-w-4xl text-gradient">
-          Engineering the Next Generation of <span className="text-accent-gradient">Cognitive Systems</span>
+          Building Robust & Production-Ready <span className="text-accent-gradient">AI Applications</span>
         </h1>
       </Reveal>
 
       {/* Subtitle */}
       <Reveal delay={0.5} yOffset={45}>
         <p className="text-base md:text-xl font-sans text-gray-400 max-w-2xl mb-10 leading-relaxed font-light">
-          Generative AI & ML Systems Engineer specializing in high-performance NLP systems, 
-          transformer-based architectures, and production-grade agentic workflows.
+          Generative AI & ML Engineer focused on building and deploying end-to-end NLP pipelines, 
+          transformer-based applications, and production-grade LLM integrations.
         </p>
       </Reveal>
 

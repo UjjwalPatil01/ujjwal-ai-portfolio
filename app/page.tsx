@@ -71,12 +71,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-xs text-gray-500">
           <div className="flex items-center gap-2">
             <Terminal className="w-3.5 h-3.5 text-indigo-500" />
-            <span>© {new Date().getFullYear()} Ujjwal Patil. Built for production-grade scale.</span>
+            <span>© {new Date().getFullYear()} Ujjwal Patil. All rights reserved.</span>
           </div>
           <div className="flex items-center gap-4">
             <a href="https://github.com/UjjwalPatil01" target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">GitHub</a>
             <span>•</span>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ujjwalpatil001" target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">LinkedIn</a>
           </div>
         </div>
       </footer>

@@ -8,18 +8,32 @@ import { Reveal } from "@/components/ui/reveal";
 export const Publications = () => {
   const papers = [
     {
-      title: "Optimizing Context Compression in Multi-Stage RAG Architectures",
-      publisher: "Self-Published Technical Briefing",
-      date: "Q1 2026",
-      desc: "An exploration into minimizing token density inside dense vector context prompts, analyzing trade-offs between recall rates and computation latency using customized sequence compression models.",
-      link: "#",
+      title: "AI-Driven Mental Health Detection from Social Media Posts in a Regional Language",
+      publisher: "International Journal of Sciences and Innovation Engineering (IJSCI)",
+      date: "May 2026",
+      desc: "Engineered deep learning sequence classifiers to evaluate mental health indicators from regional Marathi and code-mixed social media posts, leveraging customized transformer weights to capture socio-linguistic context.",
+      link: "https://drive.google.com/file/d/1hX0dcJkMd7CI_QyJfUpW8BgBwQZRIHHd/view?usp=drive_link",
     },
     {
-      title: "Scaling Deterministic Reasoning in Transformer-Based Agents",
-      publisher: "AI Systems Engineering Journal",
-      date: "Q3 2025",
-      desc: "Investigated formatting constraints (JSON mode, Regex paths) inside open-source models, highlighting techniques to improve execution accuracy to 99.4% in pipeline automation.",
-      link: "#",
+      title: "Research Publication & Acceptance Certificate",
+      publisher: "IJSCI Board of Trustees",
+      date: "May 2026",
+      desc: "Official credential certifying the peer review, acceptance, and indexing of the mental health sentiment detection research paper.",
+      link: "https://drive.google.com/file/d/1V25lZgWuzQ9XgS2WdeKIrZgnNjod9rPR/view?usp=drive_link",
+    },
+    {
+      title: "NPTEL C Programming Certification",
+      publisher: "NPTEL / IIT Madras",
+      date: "Credential",
+      desc: "Academic certification covering data structures, algorithmic design, pointer manipulation, and memory management in low-level C programming.",
+      link: "https://drive.google.com/file/d/1ark-RtysU2d-_7kfhEZSb8HR_HL9igB3/view?usp=drive_link",
+    },
+    {
+      title: "CodSoft Web Development Internship",
+      publisher: "CodSoft",
+      date: "Internship",
+      desc: "Practical engineering experience building responsive layouts, handling Git version control workflows, and implementing interactive client scripts.",
+      link: "https://drive.google.com/file/d/1blfNW8PD6S-_RWSNdXNeWK6UD_bLfU_d/view?usp=drive_link",
     },
   ];
 
@@ -31,17 +45,17 @@ export const Publications = () => {
         <div className="lg:col-span-4 space-y-4 lg:sticky lg:top-8">
           <Reveal delay={0.1}>
             <span className="text-xs font-mono uppercase tracking-widest text-indigo-400">
-              {"// Research & Insights"}
+              {"// Research & Credentials"}
             </span>
           </Reveal>
           <Reveal delay={0.2}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gradient">
-              Publications & Systems Briefs
+              Publications & Certifications
             </h2>
           </Reveal>
           <Reveal delay={0.3}>
             <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base">
-              A record of analytical deep-dives, whitepapers, and operational blueprints addressing real-world integration bottlenecks in artificial intelligence.
+              Peer-reviewed research and verified academic achievements demonstrating capabilities in applied NLP, machine learning, and standard full-stack programming.
             </p>
           </Reveal>
         </div>
@@ -50,7 +64,7 @@ export const Publications = () => {
         <div className="lg:col-span-8 space-y-6">
           {papers.map((p, idx) => (
             <Reveal key={idx} delay={0.3 + idx * 0.1}>
-              <a href={p.link} className="block group">
+              <a href={p.link} target="_blank" rel="noreferrer" className="block group">
                 <GlassCard className="p-6 md:p-8 hover:border-indigo-500/20 transition-all duration-300">
                   <div className="flex justify-between items-start gap-4 mb-4">
                     <div className="space-y-1">

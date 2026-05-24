@@ -23,31 +23,31 @@ const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export const Projects = () => {
   const projects = [
     {
-      title: "Synthetix Agentic Engine",
-      subtitle: "Autonomous Reasoning & Multi-Agent Orchestrator",
-      desc: "Built a production-grade multi-agent orchestrator featuring sub-second planning loops, parallel task routing, and self-correcting prompt evaluation systems. Scaled to process thousands of complex concurrent queries.",
+      title: "MoodMate",
+      subtitle: "Flagship NLP Sentiment Platform",
+      desc: "Fine-tuned an XLM-RoBERTa model on MahaSent using Selective Layer Freezing (SLF) to achieve 84.80% validation accuracy for regional Marathi/code-mixed text. Designed a low-latency asynchronous FastAPI inference service using Anyio threadpools alongside Supabase PostgreSQL multi-tenancy and a React/TypeScript web dashboard.",
       icon: <Terminal className="w-5 h-5 text-indigo-400" />,
-      tags: ["FastAPI", "LangChain", "vLLM", "React", "TypeScript"],
-      github: "https://github.com/UjjwalPatil01",
-      demo: "#",
+      tags: ["FastAPI", "XLM-RoBERTa", "Supabase", "React", "TypeScript", "Python"],
+      github: "https://github.com/MoodMate-WebApp/MoodMate-WebApp",
+      demo: "https://mood-mate-web-app.vercel.app/",
     },
     {
-      title: "Neura检索 (RAG Pipeline)",
-      subtitle: "High-Throughput Hybrid Vector Retrieval",
-      desc: "Engineered an enterprise RAG pipeline utilizing hybrid semantic-keyword lookup, contextual rankers, and multi-stage document compression. Optimized average generation latency by 45% using customized KV-caching.",
-      icon: <Database className="w-5 h-5 text-purple-400" />,
-      tags: ["PyTorch", "Qdrant", "FastAPI", "Transformers", "gRPC"],
-      github: "https://github.com/UjjwalPatil01",
-      demo: "#",
+      title: "Codenova",
+      subtitle: "AI-Powered Code Reviewer",
+      desc: "Architected and containerized a fastapi code validation service wrapping GPT-4 APIs, utilizing Pydantic to strictly parse and guarantee structured JSON analysis outputs. Created a comprehensive multi-language code testing harness and fully orchestrated Render deployments via zero-config Docker setups.",
+      icon: <Cpu className="w-5 h-5 text-purple-400" />,
+      tags: ["FastAPI", "GPT-4 API", "Pydantic", "Docker", "Render", "Python"],
+      github: "https://github.com/UjjwalPatil01/ai-code-reviewer",
+      demo: "https://codenova-ui.onrender.com/",
     },
     {
-      title: "LLM Quantization Toolkit",
-      subtitle: "Low-Latency Transformer Deployment Engine",
-      desc: "Developed a quantization pipeline to compile large transformer weights down to highly optimized INT4/INT8 formats. Configured deep CUDA integration for low-spec servers, cutting deployment costs by 60%.",
-      icon: <Cpu className="w-5 h-5 text-cyan-400" />,
-      tags: ["CUDA", "PyTorch", "Hugging Face", "Triton", "C++"],
-      github: "https://github.com/UjjwalPatil01",
-      demo: "#",
+      title: "3D Virtual Herbal Garden",
+      subtitle: "Interactive 3D Simulation Platform",
+      desc: "Co-engineered a virtual WebGL-based visual interactive model space, configuring optimized custom rendering loops to sustain stable 60 FPS graphical performance. Maintained robust collaborative git standards and managed standard automated deployments through Netlify CI/CD lines.",
+      icon: <Database className="w-5 h-5 text-cyan-400" />,
+      tags: ["JavaScript", "WebGL", "Netlify", "CI/CD", "HTML/CSS"],
+      github: "https://github.com/Virtual-Herbal-Garden/virtual-herbal-garden",
+      demo: "https://virtual-herbal-garden-hub.netlify.app/",
     },
   ];
 
@@ -59,17 +59,17 @@ export const Projects = () => {
       <div className="space-y-4 mb-16 relative z-10">
         <Reveal delay={0.1}>
           <span className="text-xs font-mono uppercase tracking-widest text-indigo-400">
-            {"// Technical Showcases"}
+            {"// Featured Engineering"}
           </span>
         </Reveal>
         <Reveal delay={0.2}>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gradient">
-            Systems & Applied Architectures
+            Featured Projects & Models
           </h2>
         </Reveal>
         <Reveal delay={0.3}>
           <p className="text-gray-400 max-w-2xl font-light text-base md:text-lg">
-            A selective window into core engineering pipelines, customized models, and production platforms built for speed, determinism, and scale.
+            A selective showcase of functional applications, specialized language models, and interactive platforms built with Python, TypeScript, and Docker.
           </p>
         </Reveal>
       </div>

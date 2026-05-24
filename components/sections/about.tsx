@@ -9,18 +9,18 @@ export const About = () => {
   const principles = [
     {
       icon: <Cpu className="w-5 h-5 text-indigo-400" />,
-      title: "Model Optimization",
-      desc: "Specialized in running models efficiently through custom fine-tuning, quantization, and specialized inference runtimes.",
+      title: "NLP & Model Fine-Tuning",
+      desc: "Fine-tuning transformers (like XLM-RoBERTa) with techniques like Selective Layer Freezing (SLF) to target regional and code-mixed sentiment datasets.",
     },
     {
-      icon: <Layers className="w-5 h-5 text-purple-400" />,
-      title: "Agentic Architectures",
-      desc: "Designing robust, multi-agent pipelines with structured reasoning loops, self-correction, and tool integration.",
+      icon: <Zap className="w-5 h-5 text-purple-400" />,
+      title: "Async API Engineering",
+      desc: "Designing high-performance, asynchronous endpoints using FastAPI and Anyio to manage concurrent transformer inference pipelines.",
     },
     {
-      icon: <Zap className="w-5 h-5 text-cyan-400" />,
-      title: "Production Infrastructure",
-      desc: "Deploying high-throughput, low-latency APIs capable of supporting millions of tokens with modern caching and routing layers.",
+      icon: <Layers className="w-5 h-5 text-cyan-400" />,
+      title: "Full-Stack AI Integration",
+      desc: "Architecting secure PostgreSQL schemas with Supabase Row-Level Security (RLS) and integrating model telemetry into React & TypeScript dashboards.",
     },
   ];
 
@@ -38,22 +38,19 @@ export const About = () => {
           
           <Reveal delay={0.2}>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-gradient">
-              Bridging Research with Robust Production Systems
+              Engineering Practical and Robust AI Solutions
             </h2>
           </Reveal>
           
           <Reveal delay={0.3}>
             <p className="text-gray-400 leading-relaxed font-light text-base md:text-lg">
-              I specialize in taking cutting-edge generative models and architecting them into mature, production-grade applications. 
-              By focusing heavily on the system layer—efficient context retrieval, structured output constraints, latency reduction, and reliability metrics—I build platforms that scale beyond simple playground demonstrations.
+              I focus on taking advanced language models and transforming them into functional, reliable, and production-ready applications. By bridging backend system design with machine learning pipelines, I build software products that are stable, containerized, and optimized for speed.
             </p>
           </Reveal>
 
           <Reveal delay={0.4}>
             <p className="text-gray-400 leading-relaxed font-light text-base md:text-lg">
-              My engineering approach prioritizes determinism, modularity, and comprehensive monitoring. Whether building 
-              high-performance rag retrieval engines, custom transformer fine-tunes, or autonomous multi-agent pipelines, 
-              I design for predictability and scale.
+              My engineering philosophy centers on clean architecture, secure data policies, and consistent deployments. Whether fine-tuning transformer models on specialized local datasets, designing asynchronous REST APIs with FastAPI, or architecting interactive interfaces with React and TypeScript, I build with performance and maintainability in mind.
             </p>
           </Reveal>
         </div>
