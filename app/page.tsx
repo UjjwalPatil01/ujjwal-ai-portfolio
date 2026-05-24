@@ -76,7 +76,7 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <a href="https://github.com/UjjwalPatil01" target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">GitHub</a>
             <span>•</span>
-            <a href="https://www.linkedin.com/in/ujjwalpatil001" target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ujjwalpatil-ai" target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">LinkedIn</a>
           </div>
         </div>
       </footer>

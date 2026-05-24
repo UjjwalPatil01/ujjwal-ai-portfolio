@@ -69,8 +69,8 @@ export const Contact = () => {
     {
       icon: <LinkedinIcon className="w-5 h-5" />,
       label: "LinkedIn",
-      val: "linkedin.com/in/ujjwalpatil001",
-      href: "https://www.linkedin.com/in/ujjwalpatil001",
+      val: "linkedin.com/in/ujjwalpatil-ai",
+      href: "https://www.linkedin.com/in/ujjwalpatil-ai",
     },
     {
       icon: <FileText className="w-5 h-5" />,
