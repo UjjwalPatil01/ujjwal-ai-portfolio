@@ -15,6 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ujjwal Patil | Generative AI & ML Engineer",
   description: "Generative AI & ML Engineer focused on NLP systems, transformer applications, async FastAPI, and production-grade AI engineering.",
+  openGraph: {
+    title: "Ujjwal Patil | Generative AI & ML Engineer",
+    description: "Generative AI & ML Engineer focused on NLP systems, transformer applications, async FastAPI, and production-grade AI engineering.",
+    url: "https://ujjwalpatil.notion.site",
+    siteName: "Ujjwal Patil Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ujjwal Patil | Generative AI & ML Engineer",
+    description: "Generative AI & ML Engineer focused on NLP systems, transformer applications, async FastAPI, and production-grade AI engineering.",
+  },
 };
 
 export default function RootLayout({

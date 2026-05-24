@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ExternalLink, Terminal, Database, Cpu } from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Reveal } from "@/components/ui/reveal";
@@ -30,6 +31,7 @@ export const Projects = () => {
       tags: ["FastAPI", "XLM-RoBERTa", "Supabase", "React", "TypeScript", "Python"],
       github: "https://github.com/MoodMate-WebApp/MoodMate-WebApp",
       demo: "https://mood-mate-web-app.vercel.app/",
+      image: "/moodmate_mockup.png",
     },
     {
       title: "Codenova",
@@ -39,6 +41,7 @@ export const Projects = () => {
       tags: ["FastAPI", "GPT-4 API", "Pydantic", "Docker", "Render", "Python"],
       github: "https://github.com/UjjwalPatil01/ai-code-reviewer",
       demo: "https://codenova-ui.onrender.com/",
+      image: "/codenova_mockup.png",
     },
     {
       title: "3D Virtual Herbal Garden",
@@ -48,6 +51,7 @@ export const Projects = () => {
       tags: ["JavaScript", "WebGL", "Netlify", "CI/CD", "HTML/CSS"],
       github: "https://github.com/Virtual-Herbal-Garden/virtual-herbal-garden",
       demo: "https://virtual-herbal-garden-hub.netlify.app/",
+      image: "/garden_mockup.png",
     },
   ];
 
@@ -78,40 +82,55 @@ export const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
         {projects.map((p, idx) => (
           <Reveal key={idx} delay={0.3 + idx * 0.1}>
-            <GlassCard className="h-full flex flex-col p-6 hover:border-indigo-500/20">
-              {/* Icon and Links */}
-              <div className="flex justify-between items-center mb-6">
-                <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-indigo-400">
-                  {p.icon}
-                </div>
-                <div className="flex gap-3 text-gray-400">
-                  <a href={p.github} target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">
-                    <GithubIcon className="w-5 h-5" />
-                  </a>
-                  <a href={p.demo} className="hover:text-white transition-colors duration-200">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
+            <GlassCard className="h-full flex flex-col hover:border-indigo-500/20 group overflow-hidden" interactive={true}>
+              {/* Visual Preview */}
+              <div className="relative aspect-video w-full overflow-hidden border-b border-white/5 bg-neutral-900/40">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  sizes="(max-w-768px) 100vw, 33vw"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-in-out opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030303]/60 via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
 
-              {/* Title & Info */}
-              <div className="space-y-2 mb-6">
-                <h3 className="text-xl font-bold text-white tracking-tight">{p.title}</h3>
-                <h4 className="text-xs font-mono text-indigo-300 uppercase tracking-wider">{p.subtitle}</h4>
-              </div>
+              {/* Card Content */}
+              <div className="p-6 flex flex-col flex-grow">
+                {/* Icon and Links */}
+                <div className="flex justify-between items-center mb-6">
+                  <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 text-indigo-400">
+                    {p.icon}
+                  </div>
+                  <div className="flex gap-3 text-gray-400">
+                    <a href={p.github} target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">
+                      <GithubIcon className="w-5 h-5" />
+                    </a>
+                    <a href={p.demo} target="_blank" rel="noreferrer" className="hover:text-white transition-colors duration-200">
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
 
-              {/* Description */}
-              <p className="text-sm text-gray-400 font-light leading-relaxed mb-8 flex-grow">
-                {p.desc}
-              </p>
+                {/* Title & Info */}
+                <div className="space-y-2 mb-4">
+                  <h3 className="text-xl font-bold text-white tracking-tight">{p.title}</h3>
+                  <h4 className="text-xs font-mono text-indigo-300 uppercase tracking-wider">{p.subtitle}</h4>
+                </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 pt-4 border-t border-white/5 mt-auto">
-                {p.tags.map((t, tIdx) => (
-                  <span key={tIdx} className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-xs font-mono text-gray-300">
-                    {t}
-                  </span>
-                ))}
+                {/* Description */}
+                <p className="text-sm text-gray-400 font-light leading-relaxed mb-8 flex-grow">
+                  {p.desc}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-white/5 mt-auto">
+                  {p.tags.map((t, tIdx) => (
+                    <span key={tIdx} className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-xs font-mono text-gray-300">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </GlassCard>
           </Reveal>
