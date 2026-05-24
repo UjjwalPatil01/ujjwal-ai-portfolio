@@ -76,7 +76,7 @@ export const Contact = () => {
       icon: <FileText className="w-5 h-5" />,
       label: "Curriculum Vitae",
       val: "Download PDF Resume",
-      href: "https://drive.google.com/file/d/17VDaRVKTXnwkoASuuXcIXpazRfukJNkZ/view?usp=drive_link",
+      href: "https://drive.google.com/file/d/11hJ7wt0IzkWJmVQF0_fzNMjiZ55uw6cN/view?usp=drive_link",
     },
   ];
 
