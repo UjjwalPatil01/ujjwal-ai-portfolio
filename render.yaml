@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ujjwal-ai-portfolio-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: SQLITE_DB_PATH
+        value: /opt/render/project/src/backend/data/portfolio.db
+      - key: CORS_ORIGINS
+        value: https://ujjwal-ai-portfolio.vercel.app,http://localhost:5173
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: "5"
+      - key: RATE_LIMIT_WINDOW_SECONDS
+        value: "600"
