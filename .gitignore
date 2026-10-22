@@ -37,3 +37,8 @@ build/
 .idea/
 .DS_Store
 Thumbs.db
+
+# OS & Env Safety
+Desktop.ini
+Thumbs.db
+.DS_Store

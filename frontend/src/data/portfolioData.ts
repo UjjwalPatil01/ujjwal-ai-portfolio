@@ -477,7 +477,7 @@ export const experienceItems: ExperienceItem[] = [
     location: 'Remote',
     period: 'June 2025 (01/06/2025 – 30/06/2025)',
     type: 'Internship',
-    certificateUrl: 'https://drive.google.com/file/d/1blfNW8PD6S-_RWSNdXNeWK6UD_bLfU_d/view?usp=drive_link',
+    certificateUrl: 'https://drive.google.com/file/d/1lTALvPOyoUkAUFBKGIt5xG4LVyw_gurJ/view?usp=drive_link',
     summary:
       'Completed a structured one-month remote Web Development Internship focused on building modular, responsive client-side components, integrating frontend views with RESTful backend services, and maintaining disciplined Git version control.',
     achievements: [
@@ -518,7 +518,7 @@ export const certificationItems: CertificationItem[] = [
       'Hands-On Python Programming Score: 93.99% (563.96 / 600)',
       'Overall NQT-IT Score: 74.05% (2221.36 / 3000)',
     ],
-    credentialUrl: 'https://drive.google.com/file/d/1kw75pcwMdqUqvqwgQTMjcVMTL9D3tpjj/view?usp=drive_link',
+    credentialUrl: 'https://drive.google.com/file/d/1MZQkSTr_mH8i-ZTkD7gEzNJ6g85P0qMB/view?usp=drive_link',
     actionLabel: 'View Scorecard',
   },
   {
@@ -529,7 +529,7 @@ export const certificationItems: CertificationItem[] = [
     badgeText: 'Generative AI',
     description:
       'Covers prompt design principles, zero-shot and few-shot prompting, context grounding, and mitigation of hallucinations in large language model workflows.',
-    credentialUrl: 'https://drive.google.com/file/d/1E9019zBKTdfx-BiMDY4MQv5QK0vzmOpM/view?usp=drive_link',
+    credentialUrl: 'https://drive.google.com/file/d/1_7bYRKiegAxr77kyjaRfu9_iR-dtLF0S/view?usp=drive_link',
     actionLabel: 'View Certificate',
   },
   {
@@ -540,7 +540,7 @@ export const certificationItems: CertificationItem[] = [
     badgeText: 'Internship Credential',
     description:
       'Awarded upon successful completion of the June 2025 Web Development Internship covering responsive component engineering and REST integration.',
-    credentialUrl: 'https://drive.google.com/file/d/1blfNW8PD6S-_RWSNdXNeWK6UD_bLfU_d/view?usp=drive_link',
+    credentialUrl: 'https://drive.google.com/file/d/1lTALvPOyoUkAUFBKGIt5xG4LVyw_gurJ/view?usp=drive_link',
     actionLabel: 'View Certificate',
   },
   {
@@ -551,7 +551,7 @@ export const certificationItems: CertificationItem[] = [
     badgeText: '~300 Hours Coursework',
     description:
       'Verified developer certification covering semantic HTML5, modern CSS Grid and Flexbox layouts, accessibility practices, and responsive design patterns.',
-    credentialUrl: 'https://drive.google.com/file/d/1YUxbY6zjolDzbJ13DvO9ye2HiN2deTQ5/view?usp=drive_link',
+    credentialUrl: 'https://drive.google.com/file/d/1-psZoAkYIDwFPMrPV3lNDpLMf8rwFaHB/view?usp=drive_link',
     actionLabel: 'View Certificate',
   },
   {
@@ -562,7 +562,7 @@ export const certificationItems: CertificationItem[] = [
     badgeText: 'Elite Certification (63%)',
     description:
       'Proctored IIT Kanpur certification covering procedural programming, pointers, memory management, arrays, structures, and algorithmic problem solving in C.',
-    credentialUrl: 'https://drive.google.com/file/d/1ark-RtysU2d-_7kfhEZSb8HR_HL9igB3/view?usp=drive_link',
+    credentialUrl: 'https://drive.google.com/file/d/199TlJQY69D1VRpCDb96kwq1GwfGGsUpc/view?usp=drive_link',
     actionLabel: 'View Certificate',
   },
 ];
@@ -579,8 +579,8 @@ export const researchPublication: ResearchPublication = {
   authors:
     'Ujjwal Patil, Rohan Baviskar, Aayushi Chaudhari, Harshada Bodavde, Dr. Akash D. Waghmare',
   correspondingAuthor: 'Ujjwal Pradip Patil (First & Corresponding Author)',
-  paperUrl: 'https://drive.google.com/file/d/1hX0dcJkMd7CI_QyJfUpW8BgBwQZRIHHd/view?usp=drive_link',
-  certificateUrl: 'https://drive.google.com/file/d/1V25lZgWuzQ9XgS2WdeKIrZgnNjod9rPR/view?usp=drive_link',
+  paperUrl: 'https://drive.google.com/file/d/1m1seH4rRbHPOUZwkV8OzETIHUjNTpPrJ/view?usp=drive_link',
+  certificateUrl: 'https://drive.google.com/file/d/1VgQm0vmIqzLZol7o3Z0mS64PRc29boZT/view?usp=drive_link',
   abstractSummary:
     'Investigates an end-to-end multilingual NLP framework for identifying psychological distress and mental well-being indicators in Marathi social media posts. By adapting the XLM-RoBERTa-Large architecture through Selective Layer Freezing (SLF), the study reduces computational overhead while preserving sensitivity to agglutinative Marathi morphology and English-Marathi code-mixing.',
   methodologyHighlights: [
