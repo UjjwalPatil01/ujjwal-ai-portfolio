@@ -42,3 +42,7 @@ Thumbs.db
 Desktop.ini
 Thumbs.db
 .DS_Store
+
+# Local review & archive folder (never commit or push)
+/delete_folder/
+

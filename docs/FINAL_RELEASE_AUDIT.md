@@ -160,8 +160,10 @@ tests/test_api.py::TestPortfolioBackendSuite::test_07_cors_origin_policy PASSED 
 - **Working Tree:** Clean, verified, and consistent.
 - **Git Branch:** `main`
 - **Remote:** `origin` -> `https://github.com/UjjwalPatil01/ujjwal-ai-portfolio.git`
-- **Audit & Stabilization Commit Message:** `fix: audit and stabilize AI portfolio`
-- **Release Commit:** Ready on branch `main` (1 commit ahead of `origin/main`)
-- **Push Status:** Staged and safely committed locally to `main`. The repository is 100% verified and ready for deployment.
+- **Stabilization Commit:** `cdfb228` — `fix: audit and stabilize AI portfolio`
+- **Cleanup & Release Commit:** `c90ef8d` — `chore: finalize portfolio and repository cleanup`
+- **Archive Folder:** `delete_folder/` (strictly excluded from Git via `.gitignore`)
+- **Status:** Verified and ready for deployment.
+
 
 
