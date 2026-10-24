@@ -26,6 +26,7 @@ export const ResumeModalProvider: React.FC<{ children: React.ReactNode }> = ({ c
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useResumeModal = (): ResumeModalContextType => {
   const context = useContext(ResumeModalContext);
   if (!context) {

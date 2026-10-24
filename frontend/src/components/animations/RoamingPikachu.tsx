@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useReducedMotion } from '../../hooks/useReducedMotion';
 
 type PikaMood = 'walk' | 'idle' | 'wave' | 'dizzy' | 'happy' | 'sleep' | 'drag';
 
@@ -54,6 +55,7 @@ const CLICK_REACTIONS: { text: string; mood: PikaMood }[] = [
 ];
 
 export const RoamingPikachu: React.FC = () => {
+  const prefersReducedMotion = useReducedMotion();
   const [enabled, setEnabled] = useState<boolean>(true);
   const [pos, setPos] = useState<{ x: number; y: number }>({ x: 240, y: -120 });
   const [facingRight, setFacingRight] = useState<boolean>(false);
@@ -221,8 +223,21 @@ export const RoamingPikachu: React.FC = () => {
 
   // Main 60fps skeletal animation & physics loop
   useEffect(() => {
-    if (!enabled) return;
+    if (!enabled || prefersReducedMotion) {
+      if (prefersReducedMotion) {
+        physRef.current.y = 0;
+        physRef.current.vy = 0;
+        physRef.current.onGround = true;
+        physRef.current.mood = 'idle';
+        setPos({ x: physRef.current.x, y: 0 });
+        setMood('idle');
+      }
+      return;
+    }
     let rafId: number;
+    let lastRenderedX = physRef.current.x;
+    let lastRenderedY = physRef.current.y;
+    let lastRenderedPhase = physRef.current.walkTick;
 
     const tick = () => {
       const p = physRef.current;
@@ -270,7 +285,8 @@ export const RoamingPikachu: React.FC = () => {
         }
 
         // Horizontal walking & screen-edge bonk
-        if (p.onGround && p.mood === 'walk') {
+        const isWalking = p.onGround && p.mood === 'walk';
+        if (isWalking) {
           p.x += p.vx;
           p.walkTick += 0.16;
           setFacingRight(p.vx > 0);
@@ -295,20 +311,42 @@ export const RoamingPikachu: React.FC = () => {
             setFacingRight(false);
             triggerSpeech('Ouch! Hit the right viewport boundary!', 4200);
           }
-        } else {
+        } else if (p.mood === 'wave' || p.mood === 'dizzy' || p.mood === 'happy') {
           p.walkTick += 0.08;
         }
 
-        setPos({ x: p.x, y: p.y });
-        setWalkPhase(p.walkTick);
+        const isStationary = !isWalking && p.onGround && (p.mood === 'idle' || p.mood === 'sleep');
+        if (!isStationary || Math.abs(p.x - lastRenderedX) > 0.1 || Math.abs(p.y - lastRenderedY) > 0.1) {
+          lastRenderedX = p.x;
+          lastRenderedY = p.y;
+          setPos({ x: p.x, y: p.y });
+        }
+
+        if (!isStationary || Math.abs(p.walkTick - lastRenderedPhase) > 0.05) {
+          lastRenderedPhase = p.walkTick;
+          setWalkPhase(p.walkTick);
+        }
       }
 
       rafId = window.requestAnimationFrame(tick);
     };
 
     rafId = window.requestAnimationFrame(tick);
-    return () => window.cancelAnimationFrame(rafId);
-  }, [enabled]);
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        window.cancelAnimationFrame(rafId);
+      } else {
+        rafId = window.requestAnimationFrame(tick);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [enabled, prefersReducedMotion]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     e.stopPropagation();

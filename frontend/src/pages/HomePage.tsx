@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { ProjectCaseStudyModal } from '../components/projects/ProjectCaseStudyModal';
 import { About } from '../components/sections/About';
 import { Certifications } from '../components/sections/Certifications';
@@ -15,6 +16,20 @@ import { ProjectItem } from '../types/portfolio';
 
 export const HomePage: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const elementId = location.hash.replace('#', '');
+      const element = document.getElementById(elementId);
+      if (element) {
+        const timeoutId = window.setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 80);
+        return () => window.clearTimeout(timeoutId);
+      }
+    }
+  }, [location.hash]);
 
   return (
     <>

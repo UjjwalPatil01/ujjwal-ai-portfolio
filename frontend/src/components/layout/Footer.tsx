@@ -1,10 +1,13 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Code2, Download, ExternalLink, Eye, Mail, Sparkles } from 'lucide-react';
 import { navItems, profileIdentity } from '../../data/portfolioData';
 import { useResumeModal } from '../../context/ResumeModalContext';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   const { openResumeModal } = useResumeModal();
 
   return (
@@ -35,16 +38,19 @@ export const Footer: React.FC = () => {
               Navigation
             </div>
             <ul className="grid grid-cols-2 gap-1.5 text-xs">
-              {navItems.map((item) => (
-                <li key={item.id}>
-                  <a
-                    href={item.href}
-                    className="hover:text-cyan-300 transition-colors inline-block py-0.5"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                const href = isHomePage ? item.href : `/${item.href}`;
+                return (
+                  <li key={item.id}>
+                    <a
+                      href={href}
+                      className="hover:text-cyan-300 transition-colors inline-block py-0.5"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

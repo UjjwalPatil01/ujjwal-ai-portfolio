@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   AlertCircle,
   Check,
@@ -24,6 +24,7 @@ import { Reveal } from '../animations/Reveal';
 import { SectionHeading } from '../ui/SectionHeading';
 
 export const Contact: React.FC = () => {
+  const isMountedRef = useRef(true);
   const [formValues, setFormValues] = useState<ContactFormValues>({
     name: '',
     email: '',
@@ -42,14 +43,14 @@ export const Contact: React.FC = () => {
   const [apiOnline, setApiOnline] = useState<boolean | null>(null);
 
   useEffect(() => {
-    let mounted = true;
+    isMountedRef.current = true;
     checkBackendHealth().then((health) => {
-      if (mounted) {
+      if (isMountedRef.current) {
         setApiOnline(Boolean(health && health.status === 'healthy'));
       }
     });
     return () => {
-      mounted = false;
+      isMountedRef.current = false;
     };
   }, []);
 
@@ -88,6 +89,7 @@ export const Contact: React.FC = () => {
     setSubmitting(true);
     try {
       const response = await submitContactMessage(formValues);
+      if (!isMountedRef.current) return;
       setSubmitSuccess({
         message: response.message,
         referenceId: response.reference_id,
@@ -101,13 +103,16 @@ export const Contact: React.FC = () => {
       });
       setApiOnline(true);
     } catch (err) {
+      if (!isMountedRef.current) return;
       const message =
         err instanceof Error
           ? err.message
           : 'Unable to submit message right now. Please use the direct email option.';
       setSubmitError(message);
     } finally {
-      setSubmitting(false);
+      if (isMountedRef.current) {
+        setSubmitting(false);
+      }
     }
   };
 
